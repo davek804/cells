@@ -48,7 +48,7 @@ public class PlayPanel extends JPanel implements ActionListener, MouseListener, 
 		catch (IllegalAccessException e) {}
 	}
 //Used to be known as populate(). Starts the on screen drawing. Is activated in InterfaceTab's triggerGo listener.
-		public void populate() {
+		public void run() {
 		leftTab.triggerGo.setEnabled(true);
 		life.setPanel(this);
 		life.producers();
@@ -164,12 +164,12 @@ public class PlayPanel extends JPanel implements ActionListener, MouseListener, 
 
 		
 	}
-	@Override
-	public void run() {
-		populate();
-		repaint();
-		
-		
+	public void start() {
+		Thread th = new Thread(this);
+		th.start();
+		//populate();
+		//repaint();
+			
 	}
 }
 

@@ -87,7 +87,7 @@ public class InterfaceTab extends JPanel implements ActionListener {
 			panel.life.herbSeed = Integer.parseInt(herbArea.getText());
 			panel.life.predSeed = Integer.parseInt(predArea.getText());
 			panel.life.decoSeed = Integer.parseInt(decoArea.getText());
-				panel.run();
+				panel.start();
 			}
 		if (e.getSource() == triggerGo) {
 			labelContainer.setVisible(true);
